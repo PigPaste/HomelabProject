@@ -1,0 +1,9 @@
+<h1>Hardware</h1>
+
+| Component     | Specification                 | 
+| ------------- | ------------------------------|
+| Raspberry Pi  | Raspberry Pi 5 (8GB)          |
+| Storage       | [1 TB NVMe SSD](https://www.amazon.com/BIWIN-NV7400-Gen4x4-Internal-Desktop/dp/B0DM1R7KHZ?crid=238JIVYTHP351&dib=eyJ2IjoiMSJ9.oMEOR6Qwn8YJUjvTk_wjD_JUBfUhvZ4pqgZyCRDNZ86C4XeHM43cVH6BFUKYcaYA9ccST7k-wirWl4pDNe7cvVOcGlL1f3o3cFfHYe3_dP--U9O8ABXz8P_vIqo_SvwmNEvRqVjq7ltsCShveACu-s-C2v5MDnetbiPpllblHTkXWRIQ8_hztRVBbB2k3ZehJwXUI5QTqmPWg-0LAGVqVdMF45WNpxn3kpx0CYFafdk.oyqA_6JTbWhMVj3qnJGu5zbiDQnWHqRmw9V36PINRRc&dib_tag=se&keywords=1+tb+nvme+ssd+BIWIN+black+opal&qid=1784152296&sprefix=1+tb+nvme+ssd+biwin+black+o%2Caps%2C317&sr=8-3)                 |
+| SSD Adapter   | [PCIe SSD HAT](https://www.amazon.com/Geekworm-X1001-Key-M-Peripheral-Raspberry/dp/B0CPPGGDQT?crid=2HTUC24M4QL3O&dib=eyJ2IjoiMSJ9.3pKHBhiakxY2zbM60L8zZgTqQJRMNf2fL1TaGuDUyt4SHdXjhZGMDL_BLJbCTxkwPY8n3ji8NSkYhgSRzuVTGwxG2yic5lvLt9Xaf9218AgLBZoMghGX43BPqHkun7YI787W_tQgmxo2ANPM_YSq0ARbnSz2S2Pm1kMjg4bkQMQpmRtchqUP0IjdRXkT1I0WtzDajceUFB7gBLjeGQKfRRgZa5W2ET533iWa3Ubg3OI.kCTsWhLncXteEGyC73cAxTbTRnVAkzHSMk5YTlGdv_Y&dib_tag=se&keywords=geekworm+x1001+pcie+to+m.2+hat&qid=1784152339&sprefix=geekworm+x1001+pcie%2Caps%2C344&sr=8-1)                  |
+| Cooling       | Active Cooling Fan            |
+| Case          | [Geekworm P579 PCIe Metal Case](https://www.amazon.com/Geekworm-P579-V2-Raspberry-Support-Active/dp/B0CRD7XQCK?crid=1F2OC9LUXPHSO&dib=eyJ2IjoiMSJ9.1mes9HIIR0Njy29W61EpvE70V1rHARwf1Zx_JB_e_3ruzFtzh54QiA8_mebUWGLRQa1n2m8hwAUFszIxhlAAJWQJZ2vZpRev2DK2L_aQ_DGTGw5XY4tOEvIiwhSHqevNkwMsMfwjII1VGaIeJWcK55WCWTOr-tnU9TojmuuhPw06qZnqnZZCiOS-2RzYMF2U6luXuDFRpl-LdIrnwhvq5XJ23kkEeNAz4mS2IU7KAb4.s3-rP8O8g-vpBnRGH6coh5wEzW4pS_jpx84qhPWXc3A&dib_tag=se&keywords=geekworm+p579&qid=1784152210&sprefix=geekworm+p57%2Caps%2C379&sr=8-1) |
