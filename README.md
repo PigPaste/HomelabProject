@@ -25,10 +25,7 @@ This repository will continue to evolve as I add new services and technologies.
 | Component     | Specification                 | 
 | ------------- | ------------------------------|
 | Raspberry Pi  | Raspberry Pi 5 (8GB)          |
-| Storage       | 1 TB NVMe SSD                 |
-| SSD Adapter   | PCIe SSD HAT                  |
-| Cooling       | Active Cooling Fan            |
-| Case          | Geekworm P579 PCIe Metal Case |
+
 
 <h2>Current Services </h2>
 
