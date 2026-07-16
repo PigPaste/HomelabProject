@@ -38,4 +38,55 @@ Afterwards, push the two push tabs into their respective slots on the board and 
 
 <img width="384" height="512" alt="IMG20260708180805_Original" src="https://github.com/user-attachments/assets/baa6f432-49cb-4f27-a11d-adba52c3424f" /> <img width="375" height="500" alt="IMG20260710131346_Original_Original" src="https://github.com/user-attachments/assets/3e9e9bbc-52d2-4f5f-8917-7fb0427b660f" />
 
+<h1>Hardware Configuration</h1>
+
+<h2>Raspberry Pi OS Installation</h2>
+
+In order for the Raspberry Pi to start running the services I wanted, I needed to first install an Operating System on to the board. For the storage device, I initially used a micro SD card and used a micro SD card reader to install the OS on it. I went to the [Raspberry Pi Website](https://www.raspberrypi.com/software/) and downloaded the Raspberry Pi imager on my computer, for my respective OS. (The OS is only 1.2 GB, so any Micro SD card will do, because we'll be transferring all of the data off of the SD Card, on to the NVMe SSD we installed earlier)
+
+<img width="493" height="353" alt="Screenshot_20260716_144222-1" src="https://github.com/user-attachments/assets/2c6cba70-d6ea-4f24-8ea4-06c53723e89b" />
+
+Once installed, I inserted my micro SD card reader in my computer and went throught the following steps:
+
+- <b>Device - Raspberry Pi 5</b>
+- <b>Operating System - Raspberry Pi OS (64 bit)</b>
+- <b>Storage - Micro SD Card</b>
+- <b>Customization - Fill out on your own, but make sure to enable SSH</b>
+
+After those steps are complete, you'll write the data on the Micro SD card, and then insert the SD card into the Raspberry Pi and turn it on. After it boots up, you'll be prompted with a login screen, which you'll use the username and password you used in the Raspberry Pi Imager to get logged in, and the initial download is now complete.
+
+If you want to, you can also ensure your OS is on the latest version by clicking on the terminal and running this command:
+
+sudo update && sudo upgrade -y
+
+<h2>Cloning Data from the Micro SD Card to the SSD</h2>
+
+Now that the OS is up and running, you'll want to click on the terminal icon and type these commands:
+
+- <b>echo "kernel=kernel8.img" | sudo tee -a /boot/firmware/config.txt</b>
+- <b>curl https://raw.githubusercontent.com/geerlingguy/rpi-clone/master/install | sudo bash</b>
+- <b>sudo rpi-clone nvme0n1 -y</b>
+
+Now that all the data has been cloned over to the SSD, you'll want to change the boot order, by using the following command:
+
+sudo raspi-config
+
+Which will take you to a screen that looks like this:
+
+<img width="443" height="266" alt="Screenshot_20260716_150758" src="https://github.com/user-attachments/assets/7c7cc4fe-9d2b-4937-8b22-321859f1a65f" />
+
+Go to #6, Advanced Options
+
+<img width="441" height="266" alt="Screenshot_20260716_150902" src="https://github.com/user-attachments/assets/8de56b70-f65a-499d-8218-289fa35568bb" />
+
+Go to A4, Boot Order
+
+<img width="441" height="268" alt="Screenshot_20260716_151044-1" src="https://github.com/user-attachments/assets/19219851-6cd3-4f40-8252-74d1b8a0c2f8" />
+
+And then go to B2, so it prefers the NVMe drive.
+
+Now everything is set up on the SSD and you can turn off your Raspberry Pi, remove the Micro SD card, and then turn the Pi back on to make sure the boot order was correctly configured and that it'll bring you back to the OS.
+
+
+
 
