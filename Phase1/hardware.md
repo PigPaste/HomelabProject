@@ -12,17 +12,17 @@
 
 <h2>Initial Fan Installation</h2>
 
-First, remove the Raspberry Pi 5 from the box, and set it down
+First, remove the Raspberry Pi 5 from the box, and set it down.
 
 <img width="500" height="500" alt="45d159733_23550-raspberry-pi-5-4g-feature_x-2452663756" src="https://github.com/user-attachments/assets/c63b82ea-5d04-4eee-93b7-d129876495fb" />
 
-Next, pull out the Aluminum Active Cooling Fan, and flip it over to see the thermal pads attached on the underside
+Next, pull out the Aluminum Active Cooling Fan, and flip it over to see the thermal pads attached on the underside.
 
 <img width="512" height="226.5" alt="raspberry-pi-5-active-cooler-underside" src="https://github.com/user-attachments/assets/5fb4aad6-b110-42f0-8761-0b53ffe592a4" />
 
 Peel off the plastic film on the underside of the fan and place it on top of the board, ensuring that the thermal pads are resting on their designated chips.
 
-Afterwards, push the two push tabs into their respective slots on the board and plug the fan in, into the outlet on the board marked "fan", inbetween the USB-A sockets and the GPIO pin header near one of the push tab.
+Afterwards, push the two push tabs into their respective slots on the board and plug the fan in, into the outlet on the board marked "fan", inbetween the USB-A sockets and the GPIO pin header near one of the push tabs.
 
 <img width="512" height="384" alt="raspberry-pi-5-active-cooler-installed" src="https://github.com/user-attachments/assets/4e5f8e78-de39-436c-b07c-635c17f09783" />
 
@@ -42,7 +42,7 @@ Afterwards, push the two push tabs into their respective slots on the board and 
 
 <h2>Raspberry Pi OS Installation</h2>
 
-In order for the Raspberry Pi to start running the services I wanted, I needed to first install an Operating System on to the board. For the storage device, I initially used a micro SD card and used a micro SD card reader to install the OS on it. I went to the [Raspberry Pi Website](https://www.raspberrypi.com/software/) and downloaded the Raspberry Pi imager on my computer, for my respective OS. (The OS is only 1.2 GB, so any Micro SD card will do, because we'll be transferring all of the data off of the SD Card, on to the NVMe SSD we installed earlier)
+In order for the Raspberry Pi to start running the services I wanted, I needed to first install an Operating System on to the board. For the storage device, I initially used a micro SD card and used a micro SD card reader to install the OS on it. I went to the [Raspberry Pi Website](https://www.raspberrypi.com/software/) and downloaded the Raspberry Pi imager on my computer, for my respective OS. (The Raspberry Pi OS is only 1.2 GB, so any Micro SD card will do, because we'll be transferring all of the data off of the SD Card, on to the NVMe SSD we installed earlier)
 
 <img width="493" height="353" alt="Screenshot_20260716_144222-1" src="https://github.com/user-attachments/assets/2c6cba70-d6ea-4f24-8ea4-06c53723e89b" />
 
@@ -53,11 +53,17 @@ Once installed, I inserted my micro SD card reader in my computer and went throu
 - <b>Storage - Micro SD Card</b>
 - <b>Customization - Fill out on your own, but make sure to enable SSH</b>
 
-After those steps are complete, you'll write the data on the Micro SD card, and then insert the SD card into the Raspberry Pi and turn it on. After it boots up, you'll be prompted with a login screen, which you'll use the username and password you used in the Raspberry Pi Imager to get logged in, and the initial download is now complete.
+After those steps are complete, you'll write the data on the Micro SD card, and then insert the SD card into the Raspberry Pi in the slot on the underside of the board and turn it on. After it boots up, you can you'll be prompted with a login screen, which you'll use the username and password you used in the Raspberry Pi Imager to get logged in, and the initial download is now complete.
 
 If you want to, you can also ensure your OS is on the latest version by clicking on the terminal and running this command:
 
 sudo update && sudo upgrade -y
+
+Side note, from this point on, you can either configure the Pi through using peripherals connected to the board itself, or you can connect to it through a Secure Shell (SSH). If you want to do the latter, you need to figure out the IP address of the Raspberry Pi on your local network by using the "ifconfig" command. Next you'll need to install an application called [puTTy](https://putty.org/index.html), which allows you to create the SSH connection with your Pi. Once downloaded, it'll show a screen like this:
+
+<img width="629" height="591" alt="Screenshot_20260718_005825" src="https://github.com/user-attachments/assets/3c55ade2-3fc9-4f1d-bbef-d07b7f385db5" />
+
+All you need to do is type in the IP address of your Pi, and then you will be brought to a terminal, where you'll be prompted for a username and password, just like the GUI, and then you're connected to your Pi, where you can continue the rest of the configurations.
 
 <h2>Cloning Data from the Micro SD Card to the SSD</h2>
 
@@ -85,7 +91,7 @@ Go to A4, Boot Order
 
 And then go to B2, so it prefers the NVMe drive.
 
-Now everything is set up on the SSD and you can turn off your Raspberry Pi, remove the Micro SD card, and then turn the Pi back on to make sure the boot order was correctly configured and that it'll bring you back to the OS.
+Now everything is set up on the SSD and you can turn off your Raspberry Pi, remove the Micro SD card, and then turn the Pi back on to make sure the boot order was correctly configured and that it'll bring you back to the OS. Now you can start installing the applications!
 
 
 
