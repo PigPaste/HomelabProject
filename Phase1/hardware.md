@@ -60,11 +60,11 @@ If you want to, you can also ensure your OS is on the latest version by clicking
 
 sudo update && sudo upgrade -y
 
-Side note, from this point on, you can either configure the Pi through using peripherals connected to the board itself, or you can connect to it through a Secure Shell (SSH). If you want to do the latter, you need to figure out the IP address of the Raspberry Pi on your local network by using the "ifconfig" command. Next you'll need to install an application called [puTTy](https://putty.org/index.html), which allows you to create the SSH connection with your Pi. Once downloaded, it'll show a screen like this:
+Side note, from this point on, you can either configure the Pi through using peripherals connected to the board itself, or you can connect to it through a Secure Shell (SSH). If you want to do the latter, all you need is either the hostname of the Pi, which you just configured, or the IP address that it has on your local network. Next you'll need to install an application called [puTTy](https://putty.org/index.html), which allows you to create the SSH connection with your Pi. Once downloaded, it'll show a screen like this:
 
 <img width="629" height="591" alt="Screenshot_20260718_005825" src="https://github.com/user-attachments/assets/3c55ade2-3fc9-4f1d-bbef-d07b7f385db5" />
 
-All you need to do is type in the IP address of your Pi, and then you will be brought to a terminal, where you'll be prompted for a username and password, just like the GUI, and then you're connected to your Pi, where you can continue the rest of the configurations.
+All you need to do is type in the hostname or IP address of your Pi, and then you will be brought to a terminal, where you'll be prompted for a username and password, just like the GUI, and then you're connected to your Pi, where you can continue the rest of the configurations.
 
 <h2>Cloning Data from the Micro SD Card to the SSD</h2>
 
